@@ -1,0 +1,12 @@
+<h2>Blockchain Data</h2>
+<input type="text" [(ngModel)]="filterInput" placeholder="Filter by amount or message" />
+<ul>
+  <li *ngFor="let block of blockchain">
+    <strong>Index:</strong> {{ block.index }}<br>
+    <strong>Timestamp:</strong> {{ block.timestamp }}<br>
+    <strong>Data:</strong> {{ block.data | json }}<br>
+    <strong>Previous Hash:</strong> {{ block.previousHash }}<br>
+    <strong>Hash:</strong> {{ block.hash }}<br>
+    <hr />
+  </li>
+</ul>
